@@ -41,6 +41,10 @@ const animateOnScroll = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.1 });
 
+document.querySelector('.menu-toggle').addEventListener('click', () => {
+  document.querySelector('nav').classList.toggle('active');
+});
+
 document.querySelectorAll('.card, .project, .team-member').forEach(el => {
   el.style.opacity = '0';
   el.style.transform = 'translateY(20px)';
