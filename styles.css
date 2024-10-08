@@ -368,19 +368,20 @@ footer::before {
     transform: scale(1.1);
 }
 
-@media (max-width: 768px) {
+@media only screen and (max-device-width : 480px) {
+    body {
+        size: 50%;
+      }
+
     header {
-        padding: 0.5rem 0;
+        padding: 0.5rem 1rem; /* Reduce header padding */
     }
 
     .logo {
-        font-size: 1.5rem;
+        font-size: 1.5rem; /* Smaller logo for mobile */
     }
 
-    nav ul {
-        display: none; /* Initially hidden, toggle with JavaScript */
-    }
-
+    /* Menu Toggle */
     .menu-toggle {
         display: block;
         font-size: 1.5rem;
@@ -393,43 +394,32 @@ footer::before {
         flex-direction: column;
         width: 100%;
         position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
         background-color: var(--background-color);
         padding: 1rem;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
 
-    .hero {
-        padding: 4rem 1rem; /* Adjust padding for mobile */
-        background-size: cover; /* Ensure background image covers well */
-    }
-
+    /* Hero Content */
     .hero h1 {
-        font-size: 2.5rem; /* Adjust font size for smaller screens */
+        font-size: 2rem; /* Smaller heading */
+        margin: 0.5rem 0; /* Reduce margins */
     }
 
     .hero p {
-        font-size: 1.1rem; /* Adjust font size for smaller screens */
+        font-size: 1rem; /* Smaller paragraph */
     }
 
-    .section-title {
-        font-size: 2rem; /* Adjust section title size */
+    /* Card Styles */
+    .card {
+        padding: 1.5rem; /* Smaller card padding */
     }
 
-    .card-container {
-        grid-template-columns: 1fr; /* Stack card columns on mobile */
-    }
-
-    .scroll-to-top,
-    .dark-mode-toggle {
-        width: 40px;
-        height: 40px;
-        font-size: 1.2rem;
+    /* Section Padding */
+    .section {
+        padding: 4rem 1rem; /* Adjust section padding */
     }
 
     footer {
-        padding: 2rem 0; /* Adjust footer padding */
+        padding: 2rem 1rem; /* Smaller footer padding */
     }
 }
